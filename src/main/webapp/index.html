@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+		<title>My First NavbarApplication</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+		<!-- [if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" />
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		
+		<div class="navbar navbar-default">
+		    <div class="container-fluid">
+		        <div class="navbar-header">
+		            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar-content">
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		            </button>
+		            <a class="navbar-brand" href="#">Notes</a>
+		        </div>
+		        
+		        <div class="collapse navbar-collapse" id="mynavbar-content">
+		            <ul class="nav navbar-nav">
+		                <li class="active"><a href="#">Home</a></li>
+		            </ul>
+		        </div>
+		    </div>
+		</div>
+		
+		<div class="container">
+			<div class="row">
+			    <div class="panel-group" id="accordion">
+	                <!-- Post #1 -->
+	                <div class="panel panel-default">
+	                    <div class="panel-heading">
+	                       <h4 class="panel-title">
+	                          <a data-toggle="collapse" data-parent="#accordion" href="#collapseNote1">Post Title 1</a>
+	                       </h4>
+	                    </div>
+	                    <div id="collapseNote1" class="panel-collapse collapse in"> 
+	                        <div class="panel-body">
+	                           Hello World! Hello World! Hello World! Hello World! Hello World! Hello World!
+	                        </div>
+	                    </div>
+	                </div>
+	                <!-- Post #2 -->
+	                <div class="panel panel-default">
+	                    <div class="panel-heading">
+	                       <h4 class="panel-title">
+	                          <a data-toggle="collapse" data-parent="#accordion" href="#collapseNote2">Post Title 2</a>
+	                       </h4>
+	                    </div>
+	                    <div id="collapseNote2" class="panel-collapse collapse"> 
+	                        <div class="panel-body">
+	                           Hello World! Hello World! Hello World! Hello World! Hello World! Hello World!
+	                        </div>
+	                    </div>
+	                </div>
+                </div>
+             </div>
+             
+		     <form class="form">
+		        <div class="form-group">
+		           <label for="titleField">Title</label>
+		           <input type="text" class="form-control" id="titleField" placeholder="Title"/>
+		        </div>
+		        
+		        <div class="form-group">
+		           <label for="contentField">Content</label>
+		           <textarea class="form-control" id="contentField" placeholder="Content" ></textarea>
+		        </div>
+		        
+		        <button type="submit" class="btn btn-primary">Submit</button>
+		        <button type="reset" class="btn btn-default">Reset</button>
+		     </form>
+		</div>
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.js"></script>
+	</body>
+</html>
