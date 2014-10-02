@@ -1,26 +1,34 @@
 package com.wallacesolutions.angularlearn.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 import java.io.Serializable;
 
 /**
  * Created by wwallace on 7/23/14.
  */
+@Entity
 public class Note implements Serializable{
 
-    private long id;
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    private Long id;
     private String title;
     private String content;
 
     public Note() {
     }
 
-    public Note(long id, String title, String content) {
+    public Note(Long id, String title, String content) {
         this.id = id;
         this.title = title;
         this.content = content;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -32,7 +40,7 @@ public class Note implements Serializable{
         return content;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
