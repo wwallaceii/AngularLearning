@@ -33,10 +33,11 @@ public class NoteController {
        return savedNote;
     }
 
-    @RequestMapping(method = {RequestMethod.PUT}, value="/notes")
-    public Note update(@RequestBody Note note,
+    @RequestMapping(method = {RequestMethod.PUT}, value="/notes/{id}")
+    public Note update(@PathVariable("id") Long id,
+    		           @RequestBody Note note,
     		           HttpServletResponse response) throws IOException {
-        Note retrievedNote = repository.findOne(note.getId());
+        Note retrievedNote = repository.findOne(id);
         
         if(retrievedNote == null)
         {
