@@ -61,10 +61,10 @@
 			        
 			        <div class="form-group">
 			           <label for="contentField">Content</label>
-			           <textarea class="form-control" ng-model="bc.blog.content" id="contentField" placeholder="Content" ></textarea>
+			           <textarea class="form-control" ng-model="bc.blog.content"id="contentField" placeholder="Content" ></textarea>
 			        </div>
 			        
-			        <button type="submit" class="btn btn-primary" ng-click="bc.addBlog()">Submit</button>
+			        <button type="submit" class="btn btn-primary" ng-click="bc.addBlog(bc.blog)">Submit</button>
 			        <button type="reset" class="btn btn-default">Reset</button>
 			     </form>
 		     </div>
